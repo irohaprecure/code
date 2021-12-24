@@ -64,6 +64,10 @@
                 const classPrediction =
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
+
+                if(prediction[0].probability.toFixed(2) > 0.80){
+                    window.location.href = "./C.html";
+                }
             }
         }
     </script>
